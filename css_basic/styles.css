@@ -1,0 +1,29 @@
+/* Here are steps to get this layout, which you will have to write as CSS code in the styles.css file:
+
+Both container tags, <body> and <main> must be told that they are containers to flexible boxes: you need to apply the display: flex property to both of them.
+However, <body> contains a column of three boxes (<header>, <main> and <footer>), therefore you must apply the flex-direction: column property to <body>; whereas 
+<main> contains a row of 2 boxes (<article> and <aside>), so you must apply the flex-direction: row property to <main>.
+Ensure the <main> tag keeps an automatic height and width, by applying the flex: auto property to it.
+To wrap up the layout, you want to be sure that your content (article) takes ⅔ of the width of the page, and your aside takes ⅓; you can assign to them the number of 
+boxes they should fill in. This is done by applying the property flex: 2 to <article> (using up 2 boxes), and flex: 1 to <aside> (using up 1 box).
+Finally, you want to be sure that the user can scroll within your <article> and your <aside>. You can do this by applying the overflow-y: auto CSS property to both of 
+them */
+body{
+display: flex;
+flex-direction: column;
+}
+
+main {
+display: flex;
+flex-direction: row;
+flex: auto;
+}
+
+article{
+    flex: 2;
+    overflow-y: auto;
+}
+aside{
+    flex: 1;
+    overflow-y: auto;
+}
